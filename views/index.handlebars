@@ -1,0 +1,54 @@
+<div class='container'>  
+  <div class='row jumbotron'>
+    <img class='header-icon' src='assets/images/burger.png' alt='burger'>
+    <h1 class='header-text'>Nom That Burger</h1>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-6'>
+      <div class='row'>  
+        <h2 class='subheader-text'>Burgers</h2>
+      </div>
+      <div class='row'>
+        <ul>
+          {{#each burgers}}
+            {{#unless devoured}}
+              <p class='burger-text'>{{burger_name}}</p>
+              <button class='devour' data-id={{id}} data={{burger_name}}>Devour</button>
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class='col-md-6'>
+      <div class='row'>  
+        <h2 class='subheader-text'>Devoured Burgers</h2>
+      </div>
+      <div class='row'>
+        <ul class='devoured-burgers'>
+          {{#each burgers}}
+            {{#if devoured}}
+              <p class='burger-text'>{{burger_name}}</p>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='add-burger col-md-12'>  
+      <h2 class='formgroup-text'>Add a Burger</h2>
+      <form class='add-burger'>
+
+        <div class='form-group'>
+          <label class='label-text' for='burgerName'>Burger Name:</label>
+          <input class='add-burger-input' type='text' id='burgerName' name='name' placeholder='add a new burger'>
+        </div>
+
+        <button class='submit' id='submit' type='submit'>Add Burger</button>
+      </form>
+    </div>
+  </div>
+</div>

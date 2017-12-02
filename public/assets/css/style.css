@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #5ac48e;
+}
+
+h1.header-text {
+	font-size: 40px;
+	font-family: 'Bungee Inline', cursive;
+	text-align: center;
+	margin-top: -40px;
+	font-weight: 700;
+	letter-spacing: 1px; 
+	color: white;
+}
+
+h2.subheader-text {
+	font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin-top: -40px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: white;
+}
+
+h2.formgroup-text {
+	font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: right;
+	font-weight: 700;
+	color: white;
+}
+
+img.header-icon {
+	width: 24%;
+	margin: -45px 38% 0 38%;
+}
+
+p.burger-text {
+	color: white;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 20px;
+}
+
+button.devour,
+button.submit {
+	background-color: #b23221;
+	width: 7em;
+	border: 1px solid #b23221;
+	padding: 5px;
+	margin-bottom: 10px;
+	color: #e7e6e6;
+}
+
+input.add-burger-input {
+	width: 25em;
+	padding: 5px;
+}
+
+.label-text {
+	color: white;
+	padding: 10px;
+}
+
+.add-burger {
+	text-align: right;
+}
+
+.jumbotron {
+	background-color: #5ac48e;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.devoured-burgers {
+	text-align: right;
+}
