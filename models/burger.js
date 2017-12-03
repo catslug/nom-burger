@@ -11,11 +11,11 @@ var burger = {
       callback(result)
     })
   },
-  update: (burgerName, devoured, callback) => {
-    orm.update(burgerName, devoured, (result) => {
+  update: (burgerId, devoured, callback) => {
+    orm.updateOne(burgerId, devoured, (result) => {
       callback(result)
     })
   }
 }
 
-module.exports = burger 
+module.exports = burger   

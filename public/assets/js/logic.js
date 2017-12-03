@@ -1,8 +1,19 @@
 $(document).ready(function() {
-	//input adding a new burger, create // insert
-	//button devouring, updating the entry in the database // put 
-	// location.reload
-	$('.devour').on('click', () => {
-		let burgerId = $('.devouer').attr('data-id')
+
+	$('.devour').on('click', function() {
+		event.preventDefault()
+		let burgerObj = {
+			burgerId: $(this).attr('data-id'),
+			devoured: true
+		}
+
+		$.ajax({
+			method: 'PUT',
+			url: '/api/burgers',
+			data: burgerObj
+		}).done(function(response) {
+			console.log('RESPONSE', response)
+			window.location = response.redirectTo
+		})	
 	})
 })

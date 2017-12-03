@@ -5,23 +5,26 @@
   </div>
 
   <div class='row'>
-    <div class='col-md-6'>
+    <div class='col-md-6 burger-list-background'>
       <div class='row'>  
         <h2 class='subheader-text'>Burgers</h2>
       </div>
-      <div class='row'>
+      <div class='row burger-list'>
         <ul>
           {{#each burgers}}
             {{#unless devoured}}
-              <p class='burger-text'>{{burger_name}}</p>
-              <button class='devour' data-id={{id}} data={{burger_name}}>Devour</button>
+              <div class='burger-list-li'>
+                <p class='burger-text'>{{burger_name}}</p>
+                <button class='devour' data-id={{id}} data-name='{{burger_name}}'>Devour</button>
+                <br>
+              </div>
             {{/unless}}
           {{/each}}
         </ul>
       </div>
     </div>
 
-    <div class='col-md-6'>
+    <div class='col-md-6 devoured-list-background'>
       <div class='row'>  
         <h2 class='subheader-text'>Devoured Burgers</h2>
       </div>

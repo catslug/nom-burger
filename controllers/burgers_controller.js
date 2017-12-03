@@ -19,15 +19,13 @@ router.post('/api/burgers', (request, result) => {
 	})
 })
 
-router.put('api/burgers', (request, result) => {
-	burger.update(request.body.burgerName, request.body.devoured, (result) => {
+router.put('/api/burgers', (request, res) => {
+	burger.update(request.body.burgerId, request.body.devoured, (result) => {
 		console.log('the callback result', result) 
-		if (result.changedRows == 0) {
-      		return result.status(404).end();
-    	} else {
-      		result.status(200).end();
-   		}
+		res.send({
+			redirectTo: '/'
+		})
 	})
 })
 
-module.exports = router
+module.exports = router 
