@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 	$('.devour').on('click', function() {
-		event.preventDefault()
 		let burgerObj = {
 			burgerId: $(this).attr('data-id'),
 			devoured: true
@@ -15,5 +14,20 @@ $(document).ready(function() {
 			console.log('RESPONSE', response)
 			window.location = response.redirectTo
 		})	
+	})
+
+	$('#submit').on('click', function() {
+		let burgerObj = {
+			burgerName: $('#burgerName').val().trim()
+		}
+
+		$.ajax({
+			method: 'POST',
+			url: 'api/burgers',
+			data: burgerObj
+		}).done(function(response) {
+			console.log('RESPONSE TO POST', response)
+			window.location = response.redirectTo
+		})
 	})
 })

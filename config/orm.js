@@ -9,7 +9,7 @@ var orm = {
 			})
 	},
 	insertOne: (burgerName, callback) => {
-		let queryString = `INSERT INTO burgers VALUES (burger_name, devoured) (${burgerName}, false)`
+		let queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ('${burgerName}', 0);`
 		connection.query(queryString, (err, result) => {
 			if (err) throw err
 			callback(result)
