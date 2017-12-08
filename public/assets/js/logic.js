@@ -11,7 +11,6 @@ $(document).ready(function() {
 			url: '/api/burgers',
 			data: burgerObj
 		}).done(function(response) {
-			console.log('RESPONSE', response)
 			window.location = response.redirectTo
 		})	
 	})
@@ -26,7 +25,6 @@ $(document).ready(function() {
 			url: 'api/burgers',
 			data: burgerObj
 		}).done(function(response) {
-			console.log('RESPONSE TO POST', response)
 			window.location = response.redirectTo
 		})
 	})

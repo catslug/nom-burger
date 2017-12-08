@@ -7,7 +7,6 @@ router.get('/', (request, result) => {
 		var burgerObj = {
 			burgers: data
 		}
-		// console.log('burgerObj', burgerObj)
 		result.render('index', burgerObj)
 	})
 })
