@@ -63,9 +63,29 @@ button.devour {
 	float: left;
 }
 
+button.devour:focus,
+button.devour:hover,
+button.devour:active,
+button.submit:focus,
+button.submit:hover,
+button.submit:active {
+	background-color: #ff6b57;
+	transition: all 1s;
+}
+
 input.add-burger-input {
 	width: 25em;
-	padding: 5px;
+	padding: 10px;
+	border-radius: 25px;
+	border: none;
+	font-weight: 700;
+}
+
+input.add-burger-input:focus,
+input.add-burger-input:active,
+input.add-burger-input:hover {
+	outline: none;
+	color: #b23221;
 }
 
 .label-text {
